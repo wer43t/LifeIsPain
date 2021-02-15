@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*АХТУНГ!!!!!!! все комментарии написаны чисто для себя, так как я пишу говнокод и забываю что писал
+ * через месяц, а наработки могут понадобиться*/
+
+using System;
 
 namespace LifeIsPain
 {
@@ -36,7 +35,11 @@ namespace LifeIsPain
             {
                 for (int j = -1; j < 2; j++)
                 {
-                    int col = (x + i + cols) % cols;
+                    /* увидел это на курсе степика по плюсам
+                     Позволяет не ловить экспешен о выходе за границы массива
+                    А просто перекидывает тебя в конец с другой стороны
+                    Мне кажется в змейке такой же код*/
+                    int col = (x + i + cols) % cols; 
                     int row = (y + j + rows) % rows;
 
                     var isSelfChecking = col == x && row == y; // скипаем клетку саму себя
