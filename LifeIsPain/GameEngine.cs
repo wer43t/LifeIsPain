@@ -11,12 +11,12 @@ namespace LifeIsPain
         private bool[,] field;
         private readonly int cols;
         private readonly int rows;
-        private Random rnd = new Random();
 
         public GameEngine(int rows, int cols, int density)
         {
             this.rows = rows;
             this.cols = cols;
+            Random rnd = new Random();
             field = new bool[cols, rows];
             for (int x = 0; x < cols; x++)
             {
